@@ -1,6 +1,6 @@
 {
   "name": "@joycodetech/vaporetto-wasm",
-  "version": "0.6.5-wasm.1",
+  "version": "0.6.5-wasm.2",
   "description": "Node.js WASM bindings for daac-tools/vaporetto — fast Japanese tokenizer",
   "main": "vaporetto_node_wasm.js",
   "types": "vaporetto_node_wasm.d.ts",
