@@ -1,0 +1,31 @@
+{
+  "name": "@joycodetech/vaporetto-wasm",
+  "version": "0.1.0",
+  "description": "Node.js WASM bindings for daac-tools/vaporetto — fast Japanese tokenizer",
+  "main": "vaporetto_node_wasm.js",
+  "types": "vaporetto_node_wasm.d.ts",
+  "files": [
+    "vaporetto_node_wasm_bg.wasm",
+    "vaporetto_node_wasm.js",
+    "vaporetto_node_wasm.d.ts",
+    "vaporetto_node_wasm_bg.wasm.d.ts"
+  ],
+  "keywords": [
+    "japanese",
+    "tokenizer",
+    "vaporetto",
+    "wasm",
+    "webassembly",
+    "nlp",
+    "morphological-analyzer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joycodetech/vaporetto-wasm.git"
+  },
+  "homepage": "https://github.com/joycodetech/vaporetto-wasm",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
