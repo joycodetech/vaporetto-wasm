@@ -17,12 +17,13 @@ Node.js >= 18 required.
 
 Download a pre-trained model from [daac-tools/vaporetto-models releases](https://github.com/daac-tools/vaporetto-models/releases).
 
-Decompress the archive to obtain the `.model` file before use.
-
 ```bash
-wget https://github.com/daac-tools/vaporetto-models/releases/download/v0.6.0/bccwj-suw+unidic_pos+pron.tar.xz
-tar xf bccwj-suw+unidic_pos+pron.tar.xz
+wget https://github.com/daac-tools/vaporetto-models/releases/download/v0.5.0/bccwj-suw_c0.003.tar.xz
+tar xf bccwj-suw_c0.003.tar.xz
+# → bccwj-suw_c0.003/bccwj-suw_c0.003.model.zst
 ```
+
+The extracted `.model.zst` (zstd-compressed) can be passed directly — no further decompression needed.
 
 ## Usage
 
@@ -30,7 +31,7 @@ tar xf bccwj-suw+unidic_pos+pron.tar.xz
 import { VaporettoTokenizer } from "@joycodetech/vaporetto-wasm";
 import { readFileSync } from "fs";
 
-const model = readFileSync("./bccwj-suw+unidic_pos+pron.model");
+const model = readFileSync("./bccwj-suw_c0.003/bccwj-suw_c0.003.model.zst");
 const tokenizer = new VaporettoTokenizer(model);
 
 // Returns a space-separated string
@@ -44,8 +45,6 @@ tokenizer.tokenize_to_array("日本語のトークナイズ");
 // Free the tokenizer when done (optional but recommended)
 tokenizer.free();
 ```
-
-Zstd-compressed models (`.model.zst`) are also supported — pass the compressed buffer directly.
 
 ## API
 
